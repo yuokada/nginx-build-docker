@@ -42,13 +42,14 @@ $ docker run -d --name ngx-tmp -t ngx
 $ docker cp  ngx-tmp:/root/rpmbuild/RPMS/  target
 ```
 
-rpmを取り出したあとはコンテナを停止・削除します。
+`docker cp`で生成されたrpmファイルを取り出します。取り出したものは別途動作検証なりをしましょう。  
+rpmの検証etcが終わったらあとはコンテナを停止・削除します。
 
 ```
 $ docker stop ngx-tmp; docker rm ngx-tmp
 ```
 
-たったこれだけでrpmが出来てしまいます。
+たったこれだけでrpmが出来てしまいました。
 ビルドオプションとか変えたい場合はいったんspecファイルを取り出してパッチを当てるなどをする必要があるかと思いますが、それはまた次の機会に。
 
 Debug
