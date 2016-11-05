@@ -4,9 +4,9 @@ build nginx rpm on Docker
 ## nginxのrpmのビルドをDockerでやってみた。
 
 nginxのsrc rpmを取得してrpmbuildするだけのDockerfileを書いてみた。  
-Docker知ってたら1時間ちょいぐらいあれば出来ると思うのでビルド環境・手段としてはオススメ。
+Docker知ってたら1時間ちょいぐらいあれば出来ると思うのでビルド手段としてはオススメかな。
 
-具体的な手順としては、ビルド環境はCentos7を選択し、nginxのバージョンはここにあるものから最新のものを選んできた。
+今回はビルド環境にCentos7を選択し、nginxのバージョンはここにあるものから最新のものを選んできた。
 
 - [Index of /packages/rhel/7/SRPMS/][srpm_hosting]
 
@@ -14,7 +14,7 @@ Write Dockerfile
 =================
 
 ビルドに必要なもの以外にもいくつかパッケージが入ってるがデバッグ用にvimとか入ってると後々役立ちます。  
-rpmビルド用コンテナなのでサイズはあまり気にしてません。
+それに、rpmビルド用コンテナなのでサイズもレイヤーもあまり気にしてません。
 
 ```
 RUN yum update  -y
@@ -27,7 +27,7 @@ RUN yum install -y epel-release; \
     yum clean all
 ```
 
-あとは後は作業用のディレクトリを作ってrpmをビルドするだけです。  
+あとは後は作業用のディレクトリを作ってrpmをビルドするだけです。詳細は`Dockerfile`をみて下さい。  
 今回は取ってきたSRPMをそのままビルドしているのでDockerfileも20行で收まっています。
 
 How to build
