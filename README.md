@@ -59,7 +59,7 @@ Debug
 
 ```
 $ docker run -d -v `pwd`/target:/root/rpmbuild/RPMS --name ngx-build -t ngx
-$ docker run -i --name ngx-tmp -t ngx /bin/bash
+$ docker run --rm -i --name ngx-tmp -t ngx /bin/bash
 ```
 
 Docker Hub
