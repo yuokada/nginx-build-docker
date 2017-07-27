@@ -1,14 +1,12 @@
-# nginx-build-docker
-build nginx rpm on Docker
+# pyhton-build-docker
+build python rpm on Docker
 
-## nginxのrpmのビルドをDockerでやってみた。
+## roles
 
-nginxのsrc rpmを取得してrpmbuildするだけのDockerfileを書いてみた。  
-やってみたら1時間ちょいで出来たのでこれ割りとオススメ。
-
-ビルド環境はCentos7を選択し、nginxのバージョンはここにあるものから最新のものを選んできた。
-
-- [Index of /packages/rhel/7/SRPMS/](http://nginx.org/packages/rhel/7/SRPMS/ "Index of /packages/rhel/7/SRPMS/")
+- [CentOS6.3で、Python2.7.3のRPMを作ってみた - 都内在住エンジニアの思考整理録](http://d.hatena.ne.jp/ckreal/20130103/1357171663 "CentOS6.3で、Python2.7.3のRPMを作ってみた - 都内在住エンジニアの思考整理録")
+- [nmilford/rpm-python27: An RPM spec file build and alt-install Python 2.7 on RHEL.](https://github.com/nmilford/rpm-python27 "nmilford/rpm-python27: An RPM spec file build and alt-install Python 2.7 on RHEL.")
+- [https://svn.python.org/projects/python/trunk/Misc/RPM/python-2.7.spec](https://svn.python.org/projects/python/trunk/Misc/RPM/python-2.7.spec "https://svn.python.org/projects/python/trunk/Misc/RPM/python-2.7.spec")
+- [Python Release Python 2.7.11 | Python.org](https://www.python.org/downloads/release/python-2711/ "Python Release Python 2.7.11 | Python.org")
 
 How to build
 ============
