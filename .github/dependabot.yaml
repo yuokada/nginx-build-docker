@@ -10,3 +10,7 @@ updates:
     ignore:
       - dependency-name: "centos"
         update-types: ["version-update:semver-major"]
+  - package-ecosystem: "docker"
+    directory: "/misc"
+    schedule:
+      interval: "daily"
