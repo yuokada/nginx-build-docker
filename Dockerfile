@@ -1,4 +1,4 @@
-FROM centos:7.8
+FROM centos:7.9.2009
 MAINTAINER Yukihiro Okada
 RUN yum update  -y
 RUN yum install -y epel-release; \
