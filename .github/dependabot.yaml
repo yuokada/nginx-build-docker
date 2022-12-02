@@ -16,4 +16,4 @@ updates:
       interval: "daily"
     ignore:
       - dependency-name: "nginx"
-        versions: ["1.23.*"]
+        versions: ["1.23.x"]
